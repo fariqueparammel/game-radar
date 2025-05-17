@@ -1,6 +1,9 @@
 export default async function epicStoreApi() {
     try {
-        const response = await fetch('/api/epic/freeGamesPromotions?locale=en-US&country=IN&allowCountries=IN', {
+        const apiUrl = import.meta.env.VITE_API_URI;
+
+
+    const response = await fetch(`${apiUrl}freeGamesPromotions?locale=en-US&country=IN&allowCountries=IN`, {
             method: 'GET',
             headers: {
                 'Accept': 'application/json'
